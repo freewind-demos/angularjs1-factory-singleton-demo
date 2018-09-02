@@ -1,9 +1,14 @@
-const app = angular.module('app', []);
-app.directive('bgColor', function () {
-    return {
-        restrict: 'A',
-        link: function (scope, element, attrs) {
-            element.css("background-color", attrs.bgColor)
-        }
-    }
-});
+const app = angular.module('app', [])
+
+app.factory('RandomNumber', function () {
+    console.log('------- factory: RandomNumber')
+    return Math.random()
+})
+
+app.controller('MyController1', function ($scope, RandomNumber) {
+    $scope.message = 'random number: ' + RandomNumber
+})
+
+app.controller('MyController2', function ($scope, RandomNumber) {
+    $scope.message = 'random number: ' + RandomNumber
+})

@@ -1,7 +1,7 @@
-AngularJS1 Directive Link Demo
-==============================
+AngularJS1 Factory Singleton Demo
+=================================
 
-Do some DOM operations in `link` function of directive.
+定义factory的函数只会调用一次。所以就算一个factory被inject到多处，它们拿到的值总是同一个。
 
 ```
 npm install
@@ -14,5 +14,3 @@ Resources
 ---------
 
 - AngularJS1: <https://angularjs.org/>
-- directive api: <https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object>
-- $element api: <https://docs.angularjs.org/api/ng/function/angular.element#angularjs-s-jqlite>
